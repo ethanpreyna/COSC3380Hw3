@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flights</title>
+  <link rel="stylesheet" href="/css/search.css">
+</head>
+<body>
+  <div class="topNav">
+    
+    <button id="homeButton" class="float-left submit-button" >Home</button>
+    <button id="searchButton" class="float-left submit-button" >Search</button>
+    <button id="insertButton" class="float-left submit-button" >Insert</button>
+    <button id="updateButtton" class="float-left submit-button" >Update</button>
+
+    <script type="text/javascript">
+        document.getElementById("homeButton").onclick = function () {
+            console.log("test");
+            location.href = "http://localhost:8121/";
+        };
+        document.getElementById("searchButton").onclick = function () {
+            console.log("test");
+            location.href = "http://localhost:8121/search";
+        };
+        document.getElementById("insertButton").onclick = function () {
+            console.log("test");
+            location.href = "http://localhost:8121/insert";
+        };
+        document.getElementById("updateButtton").onclick = function () {
+            console.log("test");
+            location.href = "http://localhost:8121/update";
+        };
+    </script>
+  </div>
+
+  <div class="search">
+    Select a table to query, and enter an input_id for the query.
+    <section id="control-center">
+      <select name="table" id="table">
+        <option value="flight">Flight</option>
+        <option value="passengers">Passenger</option>
+        <option value="crew">Crew</option>
+        <option value="maintenance">Maintenance</option>
+        <option value="services">Services</option>
+        <option value="crew_baggage">Crew Baggage</option>
+        <option value="passenger_baggage">Passenger Baggage</option>
+      </select>
+      <input type="text" id="input_id" placeholder="input_id">
+      <button id="get-btn">GET DATA</button>
+    </section>
+  </div>
+  <div class="table">
+    <table class="table mt-5 text-center" id="demo-list">
+      <thead id="table-head">
+      </thead>
+      <!-- add todos in tbody by modying the HTML in main.js -->
+      <tbody id="table-body">
+      </tbody>
+    </table>
+  </div>
+      
+</body>
+</html>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>

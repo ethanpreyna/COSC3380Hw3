@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample Site</title>
+  <link rel="stylesheet" href="/css/search.css">
+</head>
+<body onload="loadFields()">
+
+  <div class="topNav">
+    <button id="homeButton" class="float-left submit-button" >Home</button>
+    <button id="searchButton" class="float-left submit-button" >Search</button>
+    <button id="insertButton" class="float-left submit-button" >Insert</button>
+    <button id="updateButtton" class="float-left submit-button" >Update</button>
+
+    <script type="text/javascript">
+        document.getElementById("homeButton").onclick = function () {
+            console.log("test");
+            location.href = "http://localhost:8121/";
+        };
+        document.getElementById("searchButton").onclick = function () {
+            console.log("test");
+            location.href = "http://localhost:8121/search";
+        };
+        document.getElementById("insertButton").onclick = function () {
+            console.log("test");
+            location.href = "http://localhost:8121/insert";
+        };
+        document.getElementById("updateButtton").onclick = function () {
+            console.log("test");
+            location.href = "http://localhost:8121/update";
+        };
+    </script>
+  </div>
+  <div class="fields">
+    Select a table to insert to below:
+    <section id="control-center">
+      <select name="table" id="table">
+        <option value="flight">Flight</option>
+        <option value="passengers">Passenger</option>
+        <option value="crew">Crew</option>
+        <option value="maintenance">Maintenance</option>
+        <option value="services">Services</option>
+        <option value="crew_baggage">Crew Baggage</option>
+        <option value="passenger_baggage">Passenger Baggage</option>
+      </select>
+    </section>
+  </div>
+  <div class="insert">
+    <button id="insert-btn" class='insert-btn'>INSERT</button>
+  </section>
+      
+</body>
+</html>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="insert.js"></script>

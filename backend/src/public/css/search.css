@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text&display=swap');
+
+body {
+  background: whitesmoke;
+  font-family:'STIX Two Text';
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+.topNav {
+  margin-left: 50px;
+  margin-top: 100px;
+  font-size: inherit;
+  padding: 0.3em 0.4em;
+  margin: 0.1em 0.2em;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  border: 1px solid rgb(0, 132, 255);
+  background-color: #fff;
+}
+
+.topNav button {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.search{
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.insert{
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.insert button{
+  
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+th{
+  margin-left:50px;
+}
+
+.table{
+  border-collapse: collapse;
+  margin-left:10px;
+  margin-top:50px;
+  width: 70%;
+  text-align: left;
+}

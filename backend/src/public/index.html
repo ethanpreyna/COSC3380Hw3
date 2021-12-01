@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample Site</title>
+  <link rel="stylesheet" href="/css/search.css">
+</head>
+<body>
+
+  <div class="topNav">
+    <button id="homeButton" class="float-left submit-button" >Home</button>
+    <button id="searchButton" class="float-left submit-button" >Search</button>
+    <button id="insertButton" class="float-left submit-button" >Insert</button>
+    <button id="updateButtton" class="float-left submit-button" >Update</button>
+
+    <script type="text/javascript">
+        document.getElementById("homeButton").onclick = function () {
+            console.log("test");
+            location.href = "http://localhost:8121/";
+        };
+        document.getElementById("searchButton").onclick = function () {
+            console.log("test");
+            location.href = "http://localhost:8121/search";
+        };
+        document.getElementById("insertButton").onclick = function () {
+            console.log("test");
+            location.href = "http://localhost:8121/insert";
+        };
+        document.getElementById("updateButtton").onclick = function () {
+            console.log("test");
+            location.href = "http://localhost:8121/update";
+        };
+    </script>
+  </div>
+      
+</body>
+</html>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>
