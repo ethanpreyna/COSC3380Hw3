@@ -4,13 +4,14 @@ import { response } from 'express';
 const backendURL='http://localhost:8121'
 
 const createNewFlight = (flight_id, airplane, takeoff_time,landing_time,gate) =>{
-  axios.post(`${backendURL}/post`, {
-      flight_id: flight_id,
-      airplane: airplane,
-      takeoff_time: takeoff_time,
-      landing_time: landing_time,
-      gate: gate
-  });
+    axios.post(`${backendURL}/post`, {
+        flight_id: flight_id,
+        airplane: airplane,
+        takeoff_time: takeoff_time,
+        landing_time: landing_time,
+        gate: gate
+        }
+    );
 }
 
 const createNewCrew = (flight_id, crew_id, crew_name,check_in_time) =>{
@@ -67,7 +68,7 @@ const createNewPassengerBaggage = (passenger_id, check_in_time, num_of_baggage) 
     });
 }
 
-//createNewFlight('30651','B720','2022-10-22 12:22:09','2022-10-22 16:22:09','B');
+console.log(createNewFlight('99999','B720','2022-10-22 12:22:09','2022-10-22 16:22:09','B'));
 //createNewCrew('30651', 'A245254987','John Dan','2022-10-22 12:22:09');
 //createNewPassenger('30651', 'B245223980','John Dan','2022-10-22 12:22:09');
 //createNewMaintenance('30651', 'Not Fueled','cleaned','complete');
@@ -77,7 +78,7 @@ const createNewPassengerBaggage = (passenger_id, check_in_time, num_of_baggage) 
 
 //Fills db with random info
 var flight_id = 30625
-for(var i = 1; i < 80; i++){
+/*for(var i = 1; i < 80; i++){
     var indexName1 = Math.floor(Math.random() * 1000);
     var indexName2 = Math.floor(Math.random() * 1000);
     var indexName3 = Math.floor(Math.random() * 1000);
@@ -1137,9 +1138,12 @@ for(var i = 1; i < 80; i++){
     //console.log(flight_id, passenger_id, passenger_name, check_in_time2,"\n");
     //console.log(crew_id, check_in_time1, num_of_baggage,"\n");
     //console.log(passenger_id, check_in_time2, num_of_baggage,"\n");
+    //console.log(flight_id, airplane, takeoff_time, landing_time, gate,"\n");
+    //console.log(flight_id, fuel_status, clean_status, maintenance_status,"\n");
+    //console.log(flight_id, movie, wifi, food, beverage, status,"\n");
     createNewCrew(flight_id, crew_id, crew_name, check_in_time1);
     createNewPassenger(flight_id, passenger_id, passenger_name, check_in_time2);
     createNewCrewBaggage(crew_id, check_in_time1, num_of_baggage);
     createNewPassengerBaggage(passenger_id, check_in_time2, num_of_baggage);
 
-}
+}*/

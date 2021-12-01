@@ -35,7 +35,7 @@
   <div class="fields">
     Select a table to insert to below:
     <section id="control-center">
-      <select name="table" id="table">
+      <select name="table" id="table" onchange=loadFields()>
         <option value="flight">Flight</option>
         <option value="passengers">Passenger</option>
         <option value="crew">Crew</option>
@@ -45,10 +45,16 @@
         <option value="passenger_baggage">Passenger Baggage</option>
       </select>
     </section>
+    <section id='text-fields'>
+    </section>
   </div>
   <div class="insert">
-    <button id="insert-btn" class='insert-btn'>INSERT</button>
-  </section>
+    <section>
+      <button id="insert-btn" class='insert-btn'>INSERT</button>
+    </section>
+    <section id='output-message'>
+    </section>
+  </div>
       
 </body>
 </html>

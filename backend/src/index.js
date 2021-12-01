@@ -125,7 +125,8 @@ app.post('/post',(req,res) =>{ // receives axios post requests to input account 
 		req.body.takeoff_time != undefined &&
 		req.body.landing_time != undefined &&
         req.body.gate != undefined){
-			posters.createNewFlight(req.body.flight_id, req.body.airplane, req.body.takeoff_time, req.body.landing_time,req.body.gate);
+            posters.createNewFlight(req.body.flight_id, req.body.airplane, req.body.takeoff_time, req.body.landing_time,req.body.gate);
+
 	}
 	else if(req.body.flight_id != undefined &&
 		req.body.crew_id != undefined &&

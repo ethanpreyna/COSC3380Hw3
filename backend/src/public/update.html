@@ -6,20 +6,70 @@
   <link rel="stylesheet" href="/css/search.css">
 </head>
 <body>
+  <div class="topNav">
+    
+  <button id="homeButton" class="float-left submit-button" >Home</button>
+  <button id="searchButton" class="float-left submit-button" >Search</button>
+  <button id="insertButton" class="float-left submit-button" >Insert</button>
+  <button id="updateButtton" class="float-left submit-button" >Update</button>
+  <script type="text/javascript">
+    document.getElementById("homeButton").onclick = function () {
+        console.log("test");
+        location.href = "http://localhost:8121/";
+    };
+    document.getElementById("searchButton").onclick = function () {
+        console.log("test");
+        location.href = "http://localhost:8121/search";
+    };
+    document.getElementById("insertButton").onclick = function () {
+        console.log("test");
+        location.href = "http://localhost:8121/insert";
+    };
+    document.getElementById("updateButtton").onclick = function () {
+        console.log("test");
+        location.href = "http://localhost:8121/update";
+    };
+  </script>
+  </div>
 
     <section id="control-center">
-      <select name="table" id="table">
-        <option value="flight">Flight</option>
-        <option value="passengers">Passenger</option>
-        <option value="crew">Crew</option>
-        <option value="maintenance">Maintenance</option>
-        <option value="services">Services</option>
-        <option value="crew_baggage">Crew Baggage</option>
-        <option value="passenger_baggage">Passenger Baggage</option>
-      </select>
-      <input type="text" id="input_id" placeholder="input_id">
-      <button id="get-btn">GET DATA</button>
+      <h2> Input the flight id (required for any) </h2>
+      <input type="text" class="form-control" placeholder="flight_id" id="demo-flight_id">
+      <h2> Input the crew id (if changing crew related)</h2>
+      <input type="text" class="form-control" placeholder="crew_id" id="demo-crew_id">
+      <h2> Input the passenger id (if changing passenger related)</h2>
+      <input type="text" class="form-control" placeholder="crew_id" id="demo-crew_id">
+      <h2>----------------------------------------------</h2>
+      <h2> Input what needs to be changed:</h2>
+      <h2>(Flight related) </h2>
+      <input type="text" class="form-control" placeholder="airplane" id="demo-airplane">
+      <input type="timestamp" class="form-control" placeholder="takeoff_time" id="demo-takeoff_time">
+      <input type="timestamp" class="form-control" placeholder="landing_time" id="demo-landing_time">
+      <input type="text" class="form-control" placeholder="gate" id="demo-gate">
+      <h2>(Crew related)</h2>
+      <input type="text" class="form-control" placeholder="crew_name" id="demo-crew_name">
+      <input type="timestamp" class="form-control" placeholder="check_in_time" id="demo-crew-check_in_time">
+      <input type="number" class="form-control" placeholder="num_of_baggage" id="demo-crew-num_of_baggage">
+      <h2>(Passenger related)</h2>
+      <input type="text" class="form-control" placeholder="passenger_name" id="demo-passenger_name">
+      <input type="timestamp" class="form-control" placeholder="check_in_time" id="demo-passenger-check_in_time">
+      <input type="number" class="form-control" placeholder="num_of_baggage" id="demo-passenger-num_of_baggage">
+      <h2>(Maintenance)</h2>
+      <input type="text" class="form-control" placeholder="fuel_status" id="demo-fuel_status">
+      <input type="text" class="form-control" placeholder="clean_status" id="demo-clean_status">
+      <input type="text" class="form-control" placeholder="maintenance_status" id="demo-maintenance_status">
+      <h2>(Service)</h2>
+      <input type="boolean" class="form-control" placeholder="movie (T/F)" id="movie">
+      <input type="boolean" class="form-control" placeholder="wifi (T/F)" id="wifi">
+      <input type="text" class="form-control" placeholder="food" id="food">
+      <input type="text" class="form-control" placeholder="beverage" id="beverage">
+      <input type="text" class="form-control" placeholder="status" id="status">
+
+      
+
     </section>
+  </script>
+</div>
 
     <table class="table mt-5 text-center" id="demo-list">
       <thead id="table-head">

@@ -24,3 +24,6 @@ SELECT * FROM flight WHERE flight_id='30626';
 SELECT * FROM flight WHERE flight_id='30626';
 SELECT * FROM flight WHERE flight_id='30626';
 SELECT * FROM flight WHERE flight_id='30625';
+SELECT * FROM flight WHERE flight_id='30626';
+SELECT * FROM passengers WHERE flight_id='30626';
+SELECT * FROM maintenance WHERE flight_id='99999';
